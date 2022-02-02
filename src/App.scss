@@ -1,0 +1,65 @@
+@font-face {
+    font-family: door_font;
+    src: url(./assets//fonts/fonts-icons.woff2);
+  }
+  .visible {
+    height: 28px !important;
+    width: 176px !important;
+  }
+  
+  .position-fixed {
+    top: -10px;
+    transform: translateY(10px) !important;
+    transition: ease 1s;
+  }
+  
+  
+.hide {
+    display: none;
+}
+.show{
+    display: block;
+}
+* {
+    margin: 0;
+    padding: 0;
+}
+.dFlex {
+    display: flex!important;
+    justify-content: center;
+    align-items: center!important;
+  }
+  li{
+      list-style: none;
+  }
+a {
+    text-decoration: none !important;
+    color: rgb(44, 43, 43) !important;
+    position: relative;
+    text-transform: uppercase;
+    width: max-content;
+    display: flex;
+}
+h2:hover {
+    cursor: default;
+}
+a::after{
+    content: "";
+    position: absolute;
+    top: 100%;
+    left: 0;
+    width: 0;
+    height: 2px;
+    transition: width 0.4s cubic-bezier(0.175, 0.885, 0.32, 1.15);
+    box-sizing: border-box;
+    background-color: rgba(86, 194, 86, 0.774);
+}
+a:hover::after{
+    width: 100%;
+}
+a:hover {
+    color: rgb(44, 42, 42);
+}
+a:active{
+    border-bottom: 1px solid green;
+}
