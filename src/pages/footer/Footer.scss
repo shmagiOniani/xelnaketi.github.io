@@ -1,0 +1,97 @@
+.footer {
+  border-top: 1px solid #9e9d9d;
+  border-bottom: 1px solid #9e9d9d;
+  padding-bottom: 40px;
+  margin-top: 40px;
+
+  .container {
+      padding-top: 35px;
+      .footer-left {
+          border-right: 1px solid #d6d6d6;
+          .email {
+              display: flex;
+              button {
+                  color: white;
+                  background-color: #99b998;
+                  font-size: 13px;
+                  line-height: 18px;
+                  padding: 12px 20px;
+                  display: inline-block;
+                  position: relative;
+                  font-weight: 600;
+                  text-align: center;
+                  text-transform: uppercase;
+                  letter-spacing: 0.3px;
+                  border-radius: 0;
+                  border-width: 0;
+                  border-style: solid;
+                  border-color: transparent;
+                  outline: 0;
+                  box-shadow: none;
+                  text-shadow: none;
+                  text-decoration: none;
+                  vertical-align: middle;
+                  cursor: pointer;
+              }
+              input {
+                  outline: none;
+                  width: 240px;
+                  max-width: 100%;
+                  border: 2px solid rgba(129, 129, 129, 0.2);
+                  background-color: transparent;
+                  font-size: 14px;
+                  border-radius: 0;
+                  -webkit-box-shadow: none;
+                  box-shadow: none;
+                  vertical-align: middle;
+                  padding: 0 15px;
+                  height: 42px;
+                  transition: border-color 0.5s ease;
+                  -webkit-transition: border-color 0.5s ease;
+                  font-family: inherit;
+                  line-height: inherit;
+              }
+          }
+      }
+      .footer-right {
+          border-left: 1px solid #d6d6d6;
+      }
+      .col {
+          text-align: center;
+          padding-top: 30px;
+          padding-bottom: 20px;
+          p {
+              color: #c5c4c4;
+              font-weight: 300;
+              line-height: 1.6;
+              font-family: inherit;
+          }
+          h2 {
+              font-size: 48px;
+              line-height: 1.2;
+              font-weight: 700;
+              font-family: inherit;
+              font-style: normal;
+              color: #2d2a2a;
+          }
+          h5 {
+              color: #c5c4c4;
+              font-weight: 100;
+              font-size: 18px;
+              text-transform: uppercase;
+              letter-spacing: 3.3px;
+              margin-bottom: 10px;
+          }
+      }
+  }
+}
+#footer{
+  padding-top: 20px;
+  text-align: center;
+  p {
+      color: #c5c4c4;
+      font-weight: 300;
+      line-height: 1.6;
+      font-family: inherit;
+  }
+}
