@@ -1,5 +1,7 @@
 import React from "react";
-import product from "../../../assets/images/product.jpg";
+import { Link } from "react-router-dom";
+
+import product from "../../../assets/images/product.png";
 import heart from "../../../assets/images/heart.svg";
 import compare from "../../../assets/images/code-compare.svg";
 import basket from "../../../assets/images/cart-shopping.svg";
@@ -43,9 +45,9 @@ function Product() {
               <p>Paragraph</p>
               <div className="price-option">
                 <p className="price">$00.00</p>
-                <a className="option" href="#">
+                <Link to="product/3" className="option">
                   Select Option
-                </a>
+                </Link>
               </div>
             </div>
           </div>

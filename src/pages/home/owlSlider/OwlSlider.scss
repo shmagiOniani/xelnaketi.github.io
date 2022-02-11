@@ -1,0 +1,159 @@
+#sales-carousel {
+    h2 {
+        padding-top: 20px;
+        padding-left: 20px;
+        margin: 0;
+        &::after {
+            content: "";
+            height: 2px;
+            width: 30px;
+            background-color: gray;
+            display: block;
+            margin-top: 8px;
+            margin-left: 2px;
+        }
+    }
+}
+@media screen and (max-width: 600px) {
+    .owl-carousel .owl-item .sale-item:hover .read-more {
+        bottom: -10px !important;
+    }
+    .owl-carousel .owl-item .sale-item .pricing {
+        .price {
+            display: none;
+        }
+        .name {
+            display: none;
+        }
+        .read-more {
+            bottom: -15px;
+            left: 14px !important;
+        }
+    }
+}
+
+@media screen and (max-width: 1000px) {
+  
+    .owl-carousel .owl-item .sale-item {
+        .name{
+            padding-left: 5px!important;
+            h3{
+                display: contents;
+            }
+        }
+        .price{
+            display: flex;
+            padding-left: 8px!important;
+        }
+        .read-more {
+            a:hover {
+                &::after {
+                    width: 63px !important;
+                }
+            }
+            a {
+                font-size: 11px !important;
+            }
+        }
+    }
+}
+
+.owl-carousel {
+    padding-right: 5px;
+    padding-top: 15px;
+    .owl-dots {
+        display: none;
+    }
+    .owl-item {
+        height: 250px;
+        background-color: rgb(255, 255, 255);
+        padding: 10px;
+        .sale-item {
+            cursor: pointer;
+            background-color: #e9e9df;
+            height: 190px;
+            width: inherit;
+            position: relative;
+            box-sizing: border-box;
+            overflow: hidden;
+            display: flex;
+            justify-content: space-between;
+            padding-right: 20px;
+            .pricing {
+                z-index: 10 !important;
+            }
+            .read-more {
+                position: absolute;
+                left: 20px;
+                bottom: 10px;
+                opacity: 0;
+                transition: all 0.5s;
+                a:hover {
+                    &::after {
+                        width: 75px;
+                        top: 25px;
+                    }
+                }
+                a {
+                    font-size: 13px;
+                    font-weight: 700;
+                    &::after {
+                        top: 25px;
+                    }
+                }
+            }
+            .name {
+                padding-left: 18px;
+                h3 {
+                    font-size: 1.3rem;
+                }
+            }
+            .price {
+                transition: 0.5s;
+                padding: 50px 0 15px 18px;
+                del {
+                    color: rgba(gray, 0.5);
+                    text-decoration: none;
+                    position: relative;
+                    font-size: 20px;
+                    font-weight: 100;
+                    &:before {
+                        content: " ";
+                        display: block;
+                        width: 100%;
+                        border-top: 1px solid rgba(gray, 0.8);
+
+                        height: 4px;
+                        position: absolute;
+                        bottom: 10px;
+                        left: 0;
+                        transform: rotate(-11deg);
+                    }
+                }
+                ins {
+                    font-size: 22px;
+                    font-weight: 100;
+                    text-decoration: none;
+                }
+            }
+
+            img {
+                transition: all 1s;
+                max-width: 180px;
+                max-height: 100%;
+            }
+        }
+    }
+}
+.owl-carousel .owl-item .sale-item:hover {
+    img {
+        transform: scale(1.2);
+    }
+    .read-more {
+        opacity: 1;
+        bottom: 25px;
+    }
+    .price {
+        padding-top: 35px;
+    }
+}

@@ -86,8 +86,12 @@
         }
     }
 }
+
+.feature-item {
+    padding-bottom: 15px;
+}
 .featured-products .container .feature-item:hover {
-    cursor: pointer;
+    // cursor: pointer;
     .image .quick-bar {
         opacity: 1;
         top: 10px;
