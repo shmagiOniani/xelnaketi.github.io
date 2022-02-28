@@ -1,0 +1,1 @@
+export {default as product1} from "./product.jpg"

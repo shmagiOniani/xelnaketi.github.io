@@ -1,8 +1,6 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Home from "./pages/home/Home";
-import Product from "./pages/product/Product";
-import Navbar from "./pages/navbar/Navbar";
-import Footer from "./pages/footer/Footer";
+import { BrowserRouter as Router, Switch, Route, Redirect } from "react-router-dom";
+import {Home, Product, Navbar, Footer, NotFound} from "./pages"
+
 import "./App.scss";
 import "bootstrap/dist/css/bootstrap.min.css";
 import 'font-awesome/css/font-awesome.min.css';
@@ -18,6 +16,9 @@ function App() {
           <Switch>
             <Route path="/home" exact component={Home} />
             <Route path="/product/:id" exact component={Product} />
+
+            <Redirect exact from="/" to="/home" />
+            <Route component={NotFound} />
           </Switch>
           <Footer />
       </div>
