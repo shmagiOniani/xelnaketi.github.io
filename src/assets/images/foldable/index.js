@@ -1,0 +1,6 @@
+export {default as DSCF2859} from "./DSCF2859.JPG"
+export {default as DSCF2861} from "./DSCF2861.JPG"
+export {default as DSCF2862} from "./DSCF2862.JPG"
+export {default as DSCF2864} from "./DSCF2864.JPG"
+export {default as DSCF2865} from "./DSCF2865.JPG"
+export {default as DSCF2867} from "./DSCF2867.JPG"

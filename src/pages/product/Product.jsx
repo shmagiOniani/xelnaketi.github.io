@@ -1,8 +1,10 @@
 import React from "react";
 import "react-responsive-carousel/lib/styles/carousel.min.css";
 import { Carousel } from "react-responsive-carousel";
-import product from "../../assets/images/product.png";
+import {DSCF2859, DSCF2861, DSCF2862, DSCF2864, DSCF2865, DSCF2867} from "../../assets/images/foldable";
 import "./Product.scss"
+
+const productArr = [DSCF2859, DSCF2861, DSCF2862, DSCF2864, DSCF2865, DSCF2867]
 
 function Product() {
   const next = <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 256 512"><path d="M64 448c-8.188 0-16.38-3.125-22.62-9.375c-12.5-12.5-12.5-32.75 0-45.25L178.8 256L41.38 118.6c-12.5-12.5-12.5-32.75 0-45.25s32.75-12.5 45.25 0l160 160c12.5 12.5 12.5 32.75 0 45.25l-160 160C80.38 444.9 72.19 448 64 448z"/></svg>;
@@ -20,21 +22,15 @@ function Product() {
               showStatus={false}
               showIndicators={false}
             >
-              <div className="product-slider-item">
-                <img src={product} />
+              {productArr.map((img, ind) => {
+                return (
+              <div key={ind} className="product-slider-item">
+                <img src={img} />
               </div>
-              <div className="product-slider-item">
-                <img src={product} />
-              </div>
-              <div className="product-slider-item">
-                <img src={product} />
-              </div>
-              <div className="product-slider-item">
-                <img src={product} />
-              </div>
-              <div className="product-slider-item">
-                <img src={product} />
-              </div>
+
+                )
+              })}
+            
             </Carousel>
           </div>
           <div className="col-xs-12 col-sm-6 product-desc">

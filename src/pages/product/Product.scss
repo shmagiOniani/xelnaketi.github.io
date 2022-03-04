@@ -3,9 +3,18 @@
     .row {
       .product-slider {
         .carousel-root {
+          display: flex;
+          flex-direction: row-reverse;
           .carousel-slider {
             .axis-horizontal {
               max-width: 450px;
+              .slider {
+                .slide {
+                  display: flex;
+                  justify-content: center;
+                  align-items: center;
+                }
+              }
             }
             .control-arrow {
               height: 50px;
@@ -16,15 +25,19 @@
            
             }
             .control-prev {
+          
+              background-color: #a5a5a5;
               &::before {
-                border-right: 8px solid #a5a5a5;
-                margin-bottom: 3px;
+                margin: 0 5px 3px;
+                border-right: 8px solid white;
+
               }
             }
             .control-next {
-              &::after {
-                border-left: 8px solid #a5a5a5;
-                margin-bottom: 3px;
+              background-color: #a5a5a5;
+              &::before {
+                margin: 0 5px 3px;
+                border-left: 8px solid white;
               }
             }
           }
@@ -36,10 +49,10 @@
                   width: 70px!important;
                   border: 1px solid #e1e1e1;
                   border-radius: 10px;
+                  display: flex;
+                  flex-direction: column;
                 }
-                .selected {
-
-                }
+                
               }
             }
           }

@@ -1,4 +1,6 @@
 import React, {useState} from "react";
+import { Link } from "react-router-dom";
+
 import search from "../../assets/images/search.png"
 import "./Navbar.scss"
 
@@ -98,7 +100,7 @@ function Navbar() {
           </div>
         </div>
         <div id="buy" >
-          <a href="#">Buy</a>
+          <Link to="/buy">Buy</Link>
         </div>
       </div>
       <div className="wrap" onClick={handleResNavOpen}>
@@ -112,13 +114,16 @@ function Navbar() {
 
     <nav>
       <div className="Home">
-        <a href="#">Home</a>
+        <Link to="/home">Home</Link>
       </div>
       <div id="buy">
-        <a href="#">Buy</a>
+        <Link to="/buy">Buy</Link>
       </div>
     </nav>
-    <h1>კარები</h1>
+    <Link to="/home">
+
+      <h1>კარები</h1>
+    </Link>
     <div className="shop-tools ">
       <div className="search">
         <input
