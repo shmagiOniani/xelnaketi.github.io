@@ -34,6 +34,11 @@
     color: #212529;
     text-align: left;
     background-color: #fff;
+    a {
+        &:active {
+            border: none!important;
+        }
+    }
 }
 
 .dFlex {

@@ -3,14 +3,17 @@ import OwlCarousel from "react-owl-carousel";
 import "owl.carousel/dist/assets/owl.carousel.css";
 import "owl.carousel/dist/assets/owl.theme.default.css";
 import product from "../../../assets/images/product.png";
-import {useCurrentWidth} from "../../../hooks/useCurrentWidth"
-import "./OwlSlider.scss"
+import { useCurrentWidth } from "../../../hooks/useCurrentWidth";
+import "./OwlSlider.scss";
+import { Link } from "react-router-dom";
+
+const arr = Array.from(Array(10).keys());
 
 function OwlSlider() {
- let screenWidth = useCurrentWidth();
+  let screenWidth = useCurrentWidth();
   return (
     <div id="sales-carousel" className="container-fluid">
-      <h2>Sales</h2>
+      <h2>ფასდაკლება</h2>
       <OwlCarousel
         className="owl-theme"
         loop
@@ -19,223 +22,37 @@ function OwlSlider() {
         dotData={true}
         items={"5"}
       >
-      <div className="sale-item">
-        <div className="pricing">
-          <div className="price">
-            <del>
-              <span className="amount">€35,<sup>00</sup></span>
-            </del>
-            <ins>
-              <span className="amount">€32,<sup>50</sup></span>
-            </ins>
-          </div>
-
-          <div className="name">
-            <h3>Door Name</h3>
-          </div>
-          <div className="read-more">
-            <a href="#">
-              <p>read more</p>
-            </a>
-          </div>
-        </div>
-        <div className="dFlex">
-          <img src={product} alt=""/>
-        </div>
-
-      </div>
-      <div className="sale-item">
-        <div className="pricing">
-          <div className="price">
-            <del>
-              <span className="amount">€35,<sup>00</sup></span>
-            </del>
-            <ins>
-              <span className="amount">€32,<sup>50</sup></span>
-            </ins>
-          </div>
-
-          <div className="name">
-            <h3>Door Name</h3>
-          </div>
-          <div className="read-more">
-            <a href="#">
-              <p>read more</p>
-            </a>
-          </div>
-        </div>
-        <div className="dFlex">
-          <img src={product} alt=""/>
-        </div>
-      </div>
-      <div className="sale-item">
-        <div className="pricing">
-          <div className="price">
-            <del>
-              <span className="amount">€35,<sup>00</sup></span>
-            </del>
-            <ins>
-              <span className="amount">€32,<sup>50</sup></span>
-            </ins>
-          </div>
-
-          <div className="name">
-            <h3>Door Name</h3>
-          </div>
-          <div className="read-more">
-            <a href="#">
-              <p>read more</p>
-            </a>
-          </div>
-        </div>
-        <div className="dFlex">
-          <img src={product} alt=""/>
-        </div>
-      </div>
-      <div className="sale-item">
-        <div className="pricing">
-          <div className="price">
-            <del>
-              <span className="amount">€35,<sup>00</sup></span>
-            </del>
-            <ins>
-              <span className="amount">€32,<sup>50</sup></span>
-            </ins>
-          </div>
-
-          <div className="name">
-            <h3>Door Name</h3>
-          </div>
-          <div className="read-more">
-            <a href="#">
-              <p>read more</p>
-            </a>
-          </div>
-        </div>
-        <div className="dFlex">
-          <img src={product} alt=""/>
-        </div>
-      </div>
-      <div className="sale-item">
-        <div className="pricing">
-          <div className="price">
-            <del>
-              <span className="amount">€35,<sup>00</sup></span>
-            </del>
-            <ins>
-              <span className="amount">€32,<sup>50</sup></span>
-            </ins>
-          </div>
-
-          <div className="name">
-            <h3>Door Name</h3>
-          </div>
-          <div className="read-more">
-            <a href="#">
-              <p>read more</p>
-            </a>
-          </div>
-        </div>
-        <div className="dFlex">
-          <img src={product} alt=""/>
-        </div>
-      </div>
-      <div className="sale-item">
-        <div className="pricing">
-          <div className="price">
-            <del>
-              <span className="amount">€35,<sup>00</sup></span>
-            </del>
-            <ins>
-              <span className="amount">€32,<sup>50</sup></span>
-            </ins>
-          </div>
-
-          <div className="name">
-            <h3>Door Name</h3>
-          </div>
-          <div className="read-more">
-            <a href="#">
-              <p>read more</p>
-            </a>
-          </div>
-        </div>
-        <div className="dFlex">
-          <img src={product} alt=""/>
-        </div>
-      </div>
-      <div className="sale-item">
-        <div className="pricing">
-          <div className="price">
-            <del>
-              <span className="amount">€35,<sup>00</sup></span>
-            </del>
-            <ins>
-              <span className="amount">€32,<sup>50</sup></span>
-            </ins>
-          </div>
-
-          <div className="name">
-            <h3>Door Name</h3>
-          </div>
-          <div className="read-more">
-            <a href="#">
-              <p>read more</p>
-            </a>
-          </div>
-        </div>
-        <div className="dFlex">
-          <img src={product} alt=""/>
-        </div>
-      </div>
-      <div className="sale-item">
-        <div className="pricing">
-          <div className="price">
-            <del>
-              <span className="amount">€35,<sup>00</sup></span>
-            </del>
-            <ins>
-              <span className="amount">€32,<sup>50</sup></span>
-            </ins>
-          </div>
-
-          <div className="name">
-            <h3>Door Name</h3>
-          </div>
-          <div className="read-more">
-            <a href="#">
-              <p>read more</p>
-            </a>
-          </div>
-        </div>
-        <div className="dFlex">
-          <img src={product} alt=""/>
-        </div>
-      </div>
-      <div className="sale-item">
-        <div className="pricing">
-          <div className="price">
-            <del>
-              <span className="amount">€35,<sup>00</sup></span>
-            </del>
-            <ins>
-              <span className="amount">€32,<sup>50</sup></span>
-            </ins>
-          </div>
-
-          <div className="name">
-            <h3>Door Name</h3>
-          </div>
-          <div className="read-more">
-            <a href="#">
-              <p>read more</p>
-            </a>
-          </div>
-        </div>
-        <div className="dFlex">
-          <img src={product} alt=""/>
-        </div>
-      </div>
+        {arr.map((item, index) => {
+          return (
+            <div key={index} className="sale-item">
+              <div className="pricing">
+                <div className="price">
+                  <del>
+                    <span className="amount">
+                      €35,<sup>00</sup>
+                    </span>
+                  </del>
+                  <ins>
+                    <span className="amount">
+                      €32,<sup>50</sup>
+                    </span>
+                  </ins>
+                </div>
+                <div className="name-more">
+                  <div className="name">
+                    <h3>პროდუქტის დასახელება</h3>
+                  </div>
+                  <div className="read-more">
+                    <Link to={`/product/${index}`}>დეტალურად ნახვა</Link>
+                  </div>
+                </div>
+              </div>
+              <div className="dFlex">
+                <img src={product} alt="" />
+              </div>
+            </div>
+          );
+        })}
       </OwlCarousel>
     </div>
   );

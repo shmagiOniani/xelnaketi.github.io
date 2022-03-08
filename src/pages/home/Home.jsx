@@ -5,8 +5,8 @@ function Home() {
   return (
     <div className="home-wrapper">
     {/* <MainSlider /> */}
-      <OwlSlider/>
       <Product/>
+      <OwlSlider/>
     </div>
  
   );

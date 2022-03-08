@@ -107,6 +107,11 @@
         }
       }
     }
+    .page-name {
+      &::after {
+        display: none;
+      }
+    }
     .shop-tools {
         display: flex;
       justify-content: flex-end;
@@ -149,9 +154,12 @@
             justify-content: center;
           }
         }
-        svg {
-          width: 19px;
-          fill: rgb(128, 128, 129);
+        .cart {
+          width: 24px;
+          img {
+            width: 100%;
+            height: auto;
+          }
         }
       }
       .search {

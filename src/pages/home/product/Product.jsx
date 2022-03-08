@@ -1,11 +1,14 @@
 import React from "react";
 import { Link } from "react-router-dom";
 
-import product from "../../../assets/images/product.png";
+import a from "../../../assets/images/product.png";
+import b from "../../../assets/images/samzareulo.jpg";
 import heart from "../../../assets/images/heart.svg";
 import compare from "../../../assets/images/code-compare.svg";
 import basket from "../../../assets/images/cart-shopping.svg";
 import "./Product.scss";
+
+const arr = Array.from(Array(10).keys());
 
 function Product() {
   const compare = (
@@ -26,273 +29,44 @@ function Product() {
   );
   return (
     <div className="container-fluid featured-products">
-      <h2>Product</h2>
+      <h2>პროდუქტი</h2>
       <div className="container">
         <div className="row">
-          <div className="col-md-3 col-sm-6 col-xs-12  feature-item">
-            <div className="product-item">
-              <div className="image dFlex">
-                <img src={product} alt="product_1.jpg" />
-                <div className="quick-bar">
-                  {heart}
-                  {cart}
-                  {compare}
+          {arr.map((item, index) => {
+            return (
+              <div
+                key={index}
+                className="col-md-3 col-sm-6 col-xs-12  feature-item"
+              >
+                <div className="product-item">
+                  <div className="image dFlex">
+                    <div className="img-container">
+                      <div className="first-img">
+                        <img src={a} alt={index} />
+                      </div>
+                      <div className="second-img">
+                        <img src={b} alt={index} />
+                      </div>
+                    </div>
+                    <div className="quick-bar">
+                      {heart}
+                      {cart}
+                    </div>
+                  </div>
+                </div>
+                <div className="title">
+                  <h4>დასახელება</h4>
+                  <p>პროდუქტის აღწერა</p>
+                  <div className="price-option">
+                    <p className="price">{index}00.00$</p>
+                    <Link to="product/3" className="option">
+                      დეტალურად ნახვა
+                    </Link>
+                  </div>
                 </div>
               </div>
-            </div>
-            <div className="title">
-              <h4>Header</h4>
-              <p>Paragraph</p>
-              <div className="price-option">
-                <p className="price">$00.00</p>
-                <Link to="product/3" className="option">
-                  Select Option
-                </Link>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-3 col-sm-6 col-xs-12  feature-item">
-            <div className="product-item">
-              <div className="image dFlex">
-                <img src={product} alt="product_1.jpg" />
-                <div className="quick-bar">
-                  {heart}
-                  {cart}
-                  {compare}
-                </div>
-              </div>
-            </div>
-            <div className="title">
-              <h4>Header</h4>
-              <p>Paragraph</p>
-              <div className="price-option">
-                <p className="price">$00.00</p>
-                <a className="option" href="#">
-                  Select Option
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-3 col-sm-6 col-xs-12  feature-item">
-            <div className="product-item">
-              <div className="image dFlex">
-                <img src={product} alt="product_1.jpg" />
-                <div className="quick-bar">
-                  {heart}
-                  {cart}
-                  {compare}
-                </div>
-              </div>
-            </div>
-            <div className="title">
-              <h4>Header</h4>
-              <p>Paragraph</p>
-              <div className="price-option">
-                <p className="price">$00.00</p>
-                <a className="option" href="#">
-                  Select Option
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-3 col-sm-6 col-xs-12  feature-item">
-            <div className="product-item">
-              <div className="image dFlex">
-                <img src={product} alt="product_1.jpg" />
-                <div className="quick-bar">
-                  {heart}
-                  {cart}
-                  {compare}
-                </div>
-              </div>
-            </div>
-            <div className="title">
-              <h4>Header</h4>
-              <p>Paragraph</p>
-              <div className="price-option">
-                <p className="price">$00.00</p>
-                <a className="option" href="#">
-                  Select Option
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-3 col-sm-6 col-xs-12  feature-item">
-            <div className="product-item">
-              <div className="image dFlex">
-                <img src={product} alt="product_1.jpg" />
-                <div className="quick-bar">
-                  {heart}
-                  {cart}
-                  {compare}
-                </div>
-              </div>
-            </div>
-            <div className="title">
-              <h4>Header</h4>
-              <p>Paragraph</p>
-              <div className="price-option">
-                <p className="price">$00.00</p>
-                <a className="option" href="#">
-                  Select Option
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-3 col-sm-6 col-xs-12  feature-item">
-            <div className="product-item">
-              <div className="image dFlex">
-                <img src={product} alt="product_1.jpg" />
-                <div className="quick-bar">
-                  {heart}
-                  {cart}
-                  {compare}
-                </div>
-              </div>
-            </div>
-            <div className="title">
-              <h4>Header</h4>
-              <p>Paragraph</p>
-              <div className="price-option">
-                <p className="price">$00.00</p>
-                <a className="option" href="#">
-                  Select Option
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-3 col-sm-6 col-xs-12  feature-item">
-            <div className="product-item">
-              <div className="image dFlex">
-                <img src={product} alt="product_1.jpg" />
-                <div className="quick-bar">
-                  {heart}
-                  {cart}
-                  {compare}
-                </div>
-              </div>
-            </div>
-            <div className="title">
-              <h4>Header</h4>
-              <p>Paragraph</p>
-              <div className="price-option">
-                <p className="price">$00.00</p>
-                <a className="option" href="#">
-                  Select Option
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-3 col-sm-6 col-xs-12  feature-item">
-            <div className="product-item">
-              <div className="image dFlex">
-                <img src={product} alt="product_1.jpg" />
-                <div className="quick-bar">
-                  {heart}
-                  {cart}
-                  {compare}
-                </div>
-              </div>
-            </div>
-            <div className="title">
-              <h4>Header</h4>
-              <p>Paragraph</p>
-              <div className="price-option">
-                <p className="price">$00.00</p>
-                <a className="option" href="#">
-                  Select Option
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-3 col-sm-6 col-xs-12  feature-item">
-            <div className="product-item">
-              <div className="image dFlex">
-                <img src={product} alt="product_1.jpg" />
-                <div className="quick-bar">
-                  {heart}
-                  {cart}
-                  {compare}
-                </div>
-              </div>
-            </div>
-            <div className="title">
-              <h4>Header</h4>
-              <p>Paragraph</p>
-              <div className="price-option">
-                <p className="price">$00.00</p>
-                <a className="option" href="#">
-                  Select Option
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-3 col-sm-6 col-xs-12  feature-item">
-            <div className="product-item">
-              <div className="image dFlex">
-                <img src={product} alt="product_1.jpg" />
-                <div className="quick-bar">
-                  {heart}
-                  {cart}
-                  {compare}
-                </div>
-              </div>
-            </div>
-            <div className="title">
-              <h4>Header</h4>
-              <p>Paragraph</p>
-              <div className="price-option">
-                <p className="price">$00.00</p>
-                <a className="option" href="#">
-                  Select Option
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-3 col-sm-6 col-xs-12  feature-item">
-            <div className="product-item">
-              <div className="image dFlex">
-                <img src={product} alt="product_1.jpg" />
-                <div className="quick-bar">
-                  {heart}
-                  {cart}
-                  {compare}
-                </div>
-              </div>
-            </div>
-            <div className="title">
-              <h4>Header</h4>
-              <p>Paragraph</p>
-              <div className="price-option">
-                <p className="price">$00.00</p>
-                <a className="option" href="#">
-                  Select Option
-                </a>
-              </div>
-            </div>
-          </div>
-          <div className="col-md-3 col-sm-6 col-xs-12  feature-item">
-            <div className="product-item">
-              <div className="image dFlex">
-                <img src={product} alt="product_1.jpg" className="img-fluid" />
-                <div className="quick-bar">
-                  {heart}
-                  {cart}
-                  {compare}
-                </div>
-              </div>
-            </div>
-            <div className="title">
-              <h4>Header</h4>
-              <p>Paragraph</p>
-              <div className="price-option">
-                <p className="price">$00.00</p>
-                <a className="option" href="#">
-                  Select Option
-                </a>
-              </div>
-            </div>
-          </div>
+            );
+          })}
         </div>
       </div>
     </div>
