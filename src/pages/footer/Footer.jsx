@@ -10,7 +10,7 @@ function Footer() {
         <div className="col footer-left">
           <div>
 
-            <h5>შეიტყვეთ პირველმა სიახლე</h5>
+            <h5>შეიტყეთ სიახლეები პირველებმა</h5>
             <h2>გამოიწერეთ ელ.ფოსტით</h2>
             <p>It only takes a second to be the first to find out about our latest news and promotions...</p>
             <div className="email dFlex">
@@ -23,7 +23,7 @@ function Footer() {
         <div className="col footer-right">
           <div>
             <h5>ადევნეთ თვალი სიახლეებს</h5>
-            <h2>გამოგვიწერეთ სოც. ქსელში</h2>
+            <h2>გამოგვყევით სოციალურ ქსელში</h2>
             <p>It only takes a second to be the first to find out about our news and promotions...</p>
             <div className="social">
 

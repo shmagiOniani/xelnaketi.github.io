@@ -83,7 +83,7 @@
         padding: 20px 0 15px 18px;
         display: flex;
         flex-direction: column;
-   
+        margin-bottom: 80px;
         del {
           width: fit-content;
           color: rgba(gray, 0.5);
@@ -138,7 +138,7 @@
       
         .tab-body {
           margin-bottom: 40px;
-          min-height: 200px;
+          min-height: 130px;
           max-width: 500px;
           div {
             color: #b5b5b5;
