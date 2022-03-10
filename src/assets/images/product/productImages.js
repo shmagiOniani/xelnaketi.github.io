@@ -3,6 +3,7 @@ import { DSCF2859, DSCF2861, DSCF2862, DSCF2864, DSCF2865, DSCF2867 } from "./fo
 export const productImages = [
     {
         id: 1,
+        author: "შმაგი ონიანი",
         name: "დასაკეცი მაყალი",
         price: "",
         description: "",
@@ -13,6 +14,7 @@ export const productImages = [
     },
     {
         id: 2,
+        author: "შმაგი ონიანი",
         name: "",
         price: "",
         description: "",
