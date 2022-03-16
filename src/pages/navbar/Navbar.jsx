@@ -1,11 +1,15 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
+import { Container, Col, Row, Form } from "react-bootstrap";
 
 import search from "../../assets/images/search.png";
 import basket from "../../assets/images/basket.png";
 import "./Navbar.scss";
+const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
 
 function Navbar() {
+  const [searchContainerOn, setSearchContainerOn] = useState(false);
+  const [searchInput, setSearchInput] = useState("");
   const [searchOpen, setSearchOpen] = useState(false);
   const [resNavOpen, setResNavOpen] = useState(false);
 
@@ -126,7 +130,7 @@ function Navbar() {
       </nav>
 
       <Link className="page-name" to="/home">
-        <h1>ათასი</h1>
+        <h1>ბარახლო</h1>
       </Link>
       <div className="shop-tools ">
         <div className="search">
@@ -139,13 +143,39 @@ function Navbar() {
               type="text"
               className="search-input"
               placeholder="ძიება..."
+              onFocus={() => setSearchContainerOn(true)}
+              onBlur={() => setSearchContainerOn(false)}
+              value={searchInput}
+              onChange={(e) => setSearchInput(e.target.value)}
             />
-            <div className="searched-cotainer search-container">
-              <div class="row">
-                {}
-                <div class="col-sm">
 
-                </div>
+            <div
+              className={`search-result-container ${
+                true ? "active-search " : ""
+                // searchContainerOn ? "active-search " : ""
+              }`}
+            >
+              <div className="map-wrapper">
+
+              {arr.map((item) => {
+                return (
+                  <Row key={item} className="search-result-item">
+                    <Col xs={2} className="img-container">
+                      <div>
+                        <img src={basket} alt="search/img" />
+                      </div>
+                    </Col>
+                    <Col xs={10} className="search-result-body">
+                      შემთხვევითად გენერირებული ტექსტი ეხმარება დიზაინერებს და
+                      ტიპოგრაფიული ნაწარმის შემქმნელებს.
+                    </Col>
+                    {/* <Col xs={2} className="read-more">
+                  <span>მეტის ნა</span>
+                </Col> */}
+                  </Row>
+                );
+              })}
+              {/* <div className="show-more"><span>მეტის ნახვა</span></div> */}
               </div>
             </div>
           </div>
@@ -166,7 +196,6 @@ function Navbar() {
           </div>
         </div>
         <div className="basket d-flex">
-          <img src="images/basket.png" alt="" />
           <div className="price-number">
             <p>0</p>
             <p>/$</p>
