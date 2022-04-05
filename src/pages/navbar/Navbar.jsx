@@ -1,17 +1,26 @@
 import React, { useState } from "react";
 import { Link } from "react-router-dom";
 import { Container, Col, Row, Form } from "react-bootstrap";
-
+import {
+  DSCF2859,
+  DSCF2861,
+  DSCF2862,
+  DSCF2864,
+  DSCF2865,
+  DSCF2867,
+} from "../../assets/images/foldable";
 import search from "../../assets/images/search.png";
 import basket from "../../assets/images/basket.png";
 import "./Navbar.scss";
 const arr = [1, 2, 3, 4, 5, 6, 7, 8, 9];
+const productArr = [DSCF2859, DSCF2861, DSCF2862, DSCF2864, DSCF2865, DSCF2867];
 
 function Navbar() {
   const [searchContainerOn, setSearchContainerOn] = useState(false);
   const [searchInput, setSearchInput] = useState("");
   const [searchOpen, setSearchOpen] = useState(false);
   const [resNavOpen, setResNavOpen] = useState(false);
+  const [cartOpen, setCartOpen] = useState(false);
 
   const handleSearch = () => {
     setSearchOpen((prev) => !prev);
@@ -40,10 +49,10 @@ function Navbar() {
       <div className="responsive-nav">
         <div id="burger" className={`nav-list ${resNavOpen ? "show" : "hide"}`}>
           <div className="Home">
-            <a href="#">Home</a>
+            <a href="home/">Home</a>
           </div>
           <div id="shop">
-            <a href="#">
+            <a href="home/">
               Shop<i className="fas fa-chevron-down d-flex"></i>
             </a>
             <div className="drop-down shop-down d-flex">
@@ -51,19 +60,19 @@ function Navbar() {
                 <h5>category</h5>
                 <ul>
                   <li>
-                    <a href="#">item</a>
+                    <a href="home/">item</a>
                   </li>
                   <li>
-                    <a href="#">item</a>
+                    <a href="home/">item</a>
                   </li>
                   <li>
-                    <a href="#">item</a>
+                    <a href="home/">item</a>
                   </li>
                   <li>
-                    <a href="#">item</a>
+                    <a href="home/">item</a>
                   </li>
                   <li>
-                    <a href="#">item</a>
+                    <a href="home/">item</a>
                   </li>
                 </ul>
               </div>
@@ -71,19 +80,19 @@ function Navbar() {
                 <h5>category</h5>
                 <ul>
                   <li>
-                    <a href="#">item</a>
+                    <a href="home/">item</a>
                   </li>
                   <li>
-                    <a href="#">item</a>
+                    <a href="home/">item</a>
                   </li>
                   <li>
-                    <a href="#">item</a>
+                    <a href="home/">item</a>
                   </li>
                   <li>
-                    <a href="#">item</a>
+                    <a href="home/">item</a>
                   </li>
                   <li>
-                    <a href="#">item</a>
+                    <a href="home/">item</a>
                   </li>
                 </ul>
               </div>
@@ -91,19 +100,19 @@ function Navbar() {
                 <h5>category</h5>
                 <ul>
                   <li>
-                    <a href="#">item</a>
+                    <a href="home/">item</a>
                   </li>
                   <li>
-                    <a href="#">item</a>
+                    <a href="home/">item</a>
                   </li>
                   <li>
-                    <a href="#">item</a>
+                    <a href="home/">item</a>
                   </li>
                   <li>
-                    <a href="#">item</a>
+                    <a href="home/">item</a>
                   </li>
                   <li>
-                    <a href="#">item</a>
+                    <a href="home/">item</a>
                   </li>
                 </ul>
               </div>
@@ -121,7 +130,6 @@ function Navbar() {
           </div>
         </div>
       </div>
-
       <nav>
         <div className="Home">{/* <Link to="/home">მთავარი</Link> */}</div>
         {/* <div id="buy">
@@ -151,31 +159,30 @@ function Navbar() {
 
             <div
               className={`search-result-container ${
-                true ? "active-search " : ""
-                // searchContainerOn ? "active-search " : ""
+                // true ? "active-search " : ""
+                searchContainerOn ? "active-search " : ""
               }`}
             >
               <div className="map-wrapper">
-
-              {arr.map((item) => {
-                return (
-                  <Row key={item} className="search-result-item">
-                    <Col xs={2} className="img-container">
-                      <div>
-                        <img src={basket} alt="search/img" />
-                      </div>
-                    </Col>
-                    <Col xs={10} className="search-result-body">
-                      შემთხვევითად გენერირებული ტექსტი ეხმარება დიზაინერებს და
-                      ტიპოგრაფიული ნაწარმის შემქმნელებს.
-                    </Col>
-                    {/* <Col xs={2} className="read-more">
+                {arr.map((item) => {
+                  return (
+                    <Row key={item} className="search-result-item">
+                      <Col xs={2} className="img-container">
+                        <div>
+                          <img src={basket} alt="search/img" />
+                        </div>
+                      </Col>
+                      <Col xs={10} className="search-result-body">
+                        შემთხვევითად გენერირებული ტექსტი ეხმარება დიზაინერებს და
+                        ტიპოგრაფიული ნაწარმის შემქმნელებს.
+                      </Col>
+                      {/* <Col xs={2} className="read-more">
                   <span>მეტის ნა</span>
                 </Col> */}
-                  </Row>
-                );
-              })}
-              {/* <div className="show-more"><span>მეტის ნახვა</span></div> */}
+                    </Row>
+                  );
+                })}
+                {/* <div className="show-more"><span>მეტის ნახვა</span></div> */}
               </div>
             </div>
           </div>
@@ -187,12 +194,36 @@ function Navbar() {
           />
         </div>
         <div className="favorite">
-          <div className="cart">
+          <div className="cart" onClick={()=> setCartOpen((prev)=> !prev)} >
             <img src={basket} />
           </div>
-          {/* {cart} */}
           <div className="number ">
             <p>1</p>
+          </div>
+          <div className={`favorite-dropdown ${
+              !cartOpen ? "invisible" : ""
+            }`}
+           
+            >
+              <div className="items"  onBlur={()=> console.log(false)}>
+                {productArr.map((item, index)=> {
+                  return (
+                    <div key={index} className="item">
+                      <div className="img-container">
+                        <img src={item} />
+                      </div>
+                      <div className="item-body">
+                        <div className="name">გასაშლელი მაყალი</div>
+                        <div className="price">200.00$</div>
+                        <div className="delete-button">X</div>
+                      </div>
+                    </div>
+                  )
+                })}
+              </div>
+                <div className="submit-cart">
+                  <Link to={"/map"}>შეკვეთა</Link>
+                </div>
           </div>
         </div>
         <div className="basket d-flex">
