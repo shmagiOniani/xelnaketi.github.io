@@ -7,7 +7,7 @@ const productRoutes = require('./routes/productRoutes');
 const app = express();
 
 // connect to mongodb & listen for requests
-const dbURI = "mongodb+srv://Shmagi_94:pwd@cluster0.rmhca.mongodb.net/mytable?retryWrites=true&w=majority";
+const dbURI = process.env.BASE_URL;
 
 mongoose.connect(dbURI, { useNewUrlParser: true, useUnifiedTopology: true })
   .then(result => app.listen(4000))
